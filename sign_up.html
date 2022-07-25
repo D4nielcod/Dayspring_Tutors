@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./sign_up.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Roboto:wght@500&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Sign Up</title>
+
+    <style></style>
+  </head>
+
+  <body>
+    <!-- Navigation Bar -->
+    <header id="nav-bar">
+      <div class="logo-div">
+        <div class="logo"></div>
+        <a id="bar-el"><i class="fa fa-bars"></i></a>
+      </div>
+
+      <ul>
+        <li><a class="header-anchor" href="./index.html">Home</a></li>
+        <li><a class="header-anchor" href="#">Contact</a></li>
+      </ul>
+    </header>
+
+    <!-- Body -->
+    <div id="sign-box">
+      <form action="./index.html">
+        <h2>Registration Form</h2>
+        <label for="username">Full Name:</label>
+        <input type="text" id="username" />
+
+        <br />
+
+        <label for="userdept">Department:</label>
+        <input type="text" name="" id="userdept" />
+
+        <br />
+
+        <label for="usercell">Phone Number:</label>
+        <input type="text" name="" id="usercell" />
+
+        <label for="userlevel">Level:</label>
+        <input type="text" name="" id="userlevel" />
+
+        <p class="course-list">Courses you want to enroll for:</p>
+        <div class="select-course">
+          <input type="checkbox" id="mth101" />
+          <label class="check-box-label" for="mth101">MTH 101</label>
+
+          <input type="checkbox" id="mth105" />
+          <label class="check-box-label" for="mth105">MTH 105</label>
+
+          <input type="checkbox" id="ssc105" />
+          <label class="check-box-label" for="ssc105">SSC 105</label>
+
+          <br />
+
+          <input type="checkbox" id="phy101" />
+          <label class="check-box-label" for="phy101">PHY 101</label>
+
+          <input type="checkbox" id="phy105" />
+          <label class="check-box-label" for="phy105">PHY 105</label>
+
+          <input type="checkbox" id="chm101" />
+          <label class="check-box-label" for="chm101">CHM 101</label>
+        </div>
+
+        <div class="button-div">
+          <button id="submit-btn" type="submit">Submit</button>
+          <div class="clear"></div>
+        </div>
+      </form>
+    </div>
+
+    <script>
+      // NAVIGATION BAR - MOBILE VIEW
+      const navBarEl = document.getElementById("nav-bar");
+      const barEl = document.getElementById("bar-el");
+      barEl.addEventListener("click", function () {
+        if (navBarEl.id === "nav-bar") {
+          navBarEl.id = "responsive";
+        } else {
+          navBarEl.id = "nav-bar";
+        }
+      });
+    </script>
+  </body>
+</html>

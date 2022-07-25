@@ -1,0 +1,289 @@
+* {
+  border: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+}
+
+/* Navigation Bar */
+#nav-bar {
+  align-items: center;
+  animation: navBar-entree 1s 1 forwards;
+  display: flex;
+  height: auto;
+  border-bottom: 1px solid rgba(105, 105, 105, 0.5);
+  justify-content: space-between;
+  padding: 0px 60px;
+  top: 0;
+  transition: all 0.5s;
+  width: 100%;
+  z-index: 10;
+}
+#nav-bar:hover {
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes navBar-entree {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#nav-bar .logo-div {
+  width: 50%;
+}
+
+#bar-el {
+  display: none;
+}
+
+#nav-bar .logo {
+  background: url("./images/logo.png") no-repeat;
+  height: 70px;
+  width: 80px;
+}
+
+#nav-bar ul {
+  text-align: right;
+  width: 50%;
+}
+
+#nav-bar ul li {
+  display: inline;
+  padding: 27px 5px;
+}
+
+#nav-bar ul li .header-anchor {
+  background-color: inherit;
+  color: #333399;
+  font-weight: 600px;
+  font-size: 100%;
+  padding: 30px 0px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 1300px) {
+  #nav-bar {
+    width: 100%;
+    padding: 0px 20px;
+  }
+
+  #nav-bar ul {
+    display: none;
+  }
+
+  #nav-bar .logo-div {
+    height: 100%;
+    width: 100%;
+  }
+
+  #nav-bar .logo {
+    display: inline-block;
+    height: 70px;
+    width: 80px;
+  }
+
+  #bar-el {
+    background-color: inherit;
+    color: #696969;
+    cursor: pointer;
+    display: inline;
+    float: right;
+    font-size: 130%;
+    margin-left: 1.5%;
+    padding-top: 30px;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+
+  #responsive {
+    animation: responsive-entree 1s 1 forwards;
+    background-color: #f2f2f2;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.7);
+    height: 100vh;
+    padding: 0px;
+    position: absolute;
+    top: 0;
+    transition: all 0.3s;
+    width: 100%;
+    z-index: 10;
+  }
+
+  @keyframes responsive-entree {
+    0% {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+
+  #responsive .logo-div {
+    padding: 0px 20px;
+    width: 100%;
+  }
+
+  #responsive .logo-div .logo {
+    background: url("./images/logo.png") no-repeat;
+    display: inline-block;
+    height: 70px;
+    width: 80px;
+  }
+
+  #responsive #bar-el {
+    background-color: inherit;
+    color: #696969;
+    cursor: pointer;
+    display: inline;
+    float: right;
+    font-size: 130%;
+    padding-top: 30px;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+
+  #responsive ul li {
+    list-style: none;
+  }
+
+  #responsive ul li.header-tutorial .fa-angle-down,
+  #responsive ul li.header-tutorial .fa-angle-right {
+    display: none;
+  }
+
+  #responsive .header-anchor {
+    background-color: inherit;
+    color: #696969;
+    display: block;
+    font-size: 90%;
+    padding: 25px;
+    text-decoration: none;
+    text-align: center;
+    transition: 0.3s;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 700px) and (max-width: 800px) and (max-height: 500px) {
+  #nav-bar {
+    padding: 0px 50px;
+  }
+
+  #responsive {
+    padding-bottom: 30px;
+  }
+
+  #responsive .logo-div {
+    padding: 0px 50px;
+  }
+}
+/* End of Navigation Bar */
+
+/* Sign Up */
+#sign-box {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  height: auto;
+  align-items: center;
+}
+
+form {
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.4);
+  background: url("./images/bkg.jpg") center/cover;
+  width: 40%;
+  border-radius: 10px;
+  padding: 30px;
+  height: auto;
+  clear: both;
+  color: #fff;
+}
+
+#sign-box h2 {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#username,
+#userdept,
+#userlevel,
+#usercell {
+  background: rgba(21, 95, 138, 0);
+  border: 1px solid;
+  border-radius: 10px;
+  color: #fff;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  padding: 10px;
+  width: 100%;
+}
+
+.course-list {
+  margin: 10px 0 5px 0;
+  text-align: left;
+  width: 100%;
+}
+
+.select-course {
+  line-height: 1.5;
+}
+
+.check-box-label {
+  margin-right: 10px;
+}
+
+.button-div {
+  width: 100%;
+  margin-top: 10px;
+  padding: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+#submit-btn {
+  background: inherit;
+  border: 1px solid;
+  border-radius: 30px;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  float: right;
+  padding: 10px 15px;
+}
+
+@media screen and (max-width: 800px) {
+  #sign-box {
+    width: 100%;
+    padding: 0;
+    margin-top: 30px;
+  }
+
+  form {
+    width: 90%;
+  }
+}
+@media screen and (min-width: 700px) and (max-width: 800px) and (max-height: 500px) {
+  #sign-box {
+    padding: 50px 0px;
+  }
+
+  form {
+    width: 50%;
+  }
+}
+/* End of Sign Up */
